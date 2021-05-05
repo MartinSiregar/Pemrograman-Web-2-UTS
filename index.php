@@ -34,37 +34,37 @@
   ?>
   <div align="center">
     <form method="post" action="index.php">
-      <span>Input Data Pemantaun Covid19</span>
+      <span>Input Data Pemantauan Covid19</span>
       <br />
       <br />
-      <select name="wilayah" required>
+      <select name="wilayah">
         <option value="dki_jakarta">DKI Jakarta</option>
         <option value="jabar">Jawa Barat</option>
         <option value="banten">Banten</option>
         <option value="jateng">Jawa Tengah</option>
-        <option selected="<?php echo $selected; ?>">Nama Wilayah</option>
+        <option selected="selected">Nama Wilayah</option>
       </select>
       <br />
-      <input type="text" value="<?php echo $jml_positif; ?>" name="jml_positif" autocomplete="off" placeholder="Jumlah Positif" required>
+      <input type="text" pattern="[0-9]+" value="<?php echo $jml_positif; ?>" name="jml_positif" autocomplete="off" placeholder="Jumlah Positif" required>
       <br />
-      <input type="text" value="<?php echo $jml_dirawat; ?>" name="jml_dirawat" autocomplete="off" placeholder="Jumlah Dirawat" required>
+      <input type="text" pattern="[0-9]+" value="<?php echo $jml_dirawat; ?>" name="jml_dirawat" autocomplete="off" placeholder="Jumlah Dirawat" required>
       <br />
-      <input type="text" value="<?php echo $jml_sembuh; ?>" name="jml_sembuh" autocomplete="off" placeholder="Jumlah Sembuh" required>
+      <input type="text" pattern="[0-9]+" value="<?php echo $jml_sembuh; ?>" name="jml_sembuh" autocomplete="off" placeholder="Jumlah Sembuh" required>
       <br />
-      <input type="text" value="<?php echo $jml_meninggal; ?>" name="jml_meninggal" autocomplete="off" placeholder="Jumlah Meninggal" required>
+      <input type="text" pattern="[0-9]+" value="<?php echo $jml_meninggal; ?>" name="jml_meninggal" autocomplete="off" placeholder="Jumlah Meninggal" required>
       <br />
-      <input type="text" value="<?php echo $nim_mhs; ?>" name="nim_mhs" autocomplete="off" placeholder="Nim Mahasiswa" required>
+      <input type="text" pattern="[0-9]+" value="<?php echo $nim_mhs; ?>" name="nim_mhs" autocomplete="off" placeholder="Nim Mahasiswa" required>
       <input type="text" value="<?php echo $nama_opt; ?>" name="nama_opt" autocomplete="off" placeholder="Nama Operator" required>
       <br />
       <input type="submit" name="simpan" value="Simpan">
     </form>
     <br />
     <?php if (isset($_POST['simpan'])) { ?>
-      <span>Data Pemantaun Covid19 wilayah <?php echo $wilayah_pilih; ?></span>
+      <span>Data Pemantauan Covid19 wilayah <?php echo $wilayah_pilih; ?></span>
       <br />
       <span>Per <?php
                 $tanggal = mktime(date("m"), date("d"), date("Y"));
-                echo date("d-M-Y", $tanggal) . "</b> ";
+                echo date("d M Y", $tanggal) . "</b> ";
                 date_default_timezone_set('Asia/Jakarta');
                 $jam = date("H:i:s");
                 echo $jam . " " . "</b>";
