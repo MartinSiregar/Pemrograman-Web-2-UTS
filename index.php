@@ -37,7 +37,7 @@
       <span>Input Data Pemantaun Covid19</span>
       <br />
       <br />
-      <select name="wilayah">
+      <select name="wilayah" required>
         <option value="dki_jakarta">DKI Jakarta</option>
         <option value="jabar">Jawa Barat</option>
         <option value="banten">Banten</option>
@@ -45,16 +45,16 @@
         <option selected="<?php echo $selected; ?>">Nama Wilayah</option>
       </select>
       <br />
-      <input type="text" value="<?php echo $jml_positif; ?>" name="jml_positif" autocomplete="off" placeholder="Jumlah Positif">
+      <input type="text" value="<?php echo $jml_positif; ?>" name="jml_positif" autocomplete="off" placeholder="Jumlah Positif" required>
       <br />
-      <input type="text" value="<?php echo $jml_dirawat; ?>" name="jml_dirawat" autocomplete="off" placeholder="Jumlah Dirawat">
+      <input type="text" value="<?php echo $jml_dirawat; ?>" name="jml_dirawat" autocomplete="off" placeholder="Jumlah Dirawat" required>
       <br />
-      <input type="text" value="<?php echo $jml_sembuh; ?>" name="jml_sembuh" autocomplete="off" placeholder="Jumlah Sembuh">
+      <input type="text" value="<?php echo $jml_sembuh; ?>" name="jml_sembuh" autocomplete="off" placeholder="Jumlah Sembuh" required>
       <br />
-      <input type="text" value="<?php echo $jml_meninggal; ?>" name="jml_meninggal" autocomplete="off" placeholder="Jumlah Meninggal">
+      <input type="text" value="<?php echo $jml_meninggal; ?>" name="jml_meninggal" autocomplete="off" placeholder="Jumlah Meninggal" required>
       <br />
-      <input type="text" value="<?php echo $nim_mhs; ?>" name="nim_mhs" autocomplete="off" placeholder="Nim Mahasiswa">
-      <input type="text" value="<?php echo $nama_opt; ?>" name="nama_opt" autocomplete="off" placeholder="Nama Operator">
+      <input type="text" value="<?php echo $nim_mhs; ?>" name="nim_mhs" autocomplete="off" placeholder="Nim Mahasiswa" required>
+      <input type="text" value="<?php echo $nama_opt; ?>" name="nama_opt" autocomplete="off" placeholder="Nama Operator" required>
       <br />
       <input type="submit" name="simpan" value="Simpan">
     </form>
